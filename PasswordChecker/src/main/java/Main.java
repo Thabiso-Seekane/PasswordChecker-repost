@@ -15,10 +15,18 @@ public class Main {
         Scanner input = new Scanner(System.in);
         PasswordCheck pass = new PasswordCheck();
 
+        PasswordCheck tester = new PasswordCheck();
+
         logger.info("please create a password:");
         String password = input.nextLine();
+try {
+    tester.passwordIsValid(password);
+    tester.passwordIsOk(password);
+}
+catch (Exception e)
+{
+    e.printStackTrace();
+}
 
-        pass.passwordIsValid(password);
-        pass.passwordIsOk(password);
     }
 }
